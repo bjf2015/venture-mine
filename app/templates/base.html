@@ -5,19 +5,50 @@
     {% else %}
     <title>Welcome to VentureMineX</title>
     {% endif %}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" 
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   </head>
   <body>
-    <div>VentureMineX: <a href="/index">Home</a></div>
-    <hr>
-    {% with messages = get_flashed_messages() %}
-      {% if messages %}
-      <ul>
-        {% for message in messages %}
-        <li>{{ message }}</li>
-        {% endfor %}
-      </ul>
-      {% endif %}
-    {% endwith %}
+    <div id="box_wrapper">
+
+    <header id="header" class="desktop-hide">
+        <span id="toggle_menu"><span></span></span>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <nav id="mainmenu_wrapper">
+                        <ul id="mainmenu" class="nav sf-menu">
+                            <li class="active">
+                                <a href="/index.html">Home</a>
+                            </li>
+                            <li>
+                                <a href="about.php">About us</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="topline" class="text-center">
+        <p id="social">
+            <a class="socialico-facebook" href="#" title="Facebook">#</a>
+            <a class="socialico-twitter" href="#" title="Twitter">#</a>
+            <a class="socialico-google" href="#" title="Google">#</a>
+            <a class="socialico-linkedin" href="#" title="LinkedIn">#</a>
+        </p>
+            <strong>
+                <span class="highlight">V</span><span class="highlight2">ent</span><span style="color: #d8de23">ureMine<span class="highlight">X</span></span>
+            </strong>
+            <span>Right-Pricing Engine</span>
+    </section>
+
+    
+
     {% block content %}{% endblock %}
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" 
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   </body>
 </html>

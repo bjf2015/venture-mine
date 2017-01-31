@@ -32,3 +32,8 @@ def login():
                           title='Sign In',
                           form=form,
                           providers=app.config['OPENID_PROVIDERS'])
+
+
+@app.route('/about')
+def about():
+    return render_template('about.html')

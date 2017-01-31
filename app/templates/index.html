@@ -1,7 +1,87 @@
 {% extends "base.html" %}
 {% block content %}
+
     <h1>Hi, {{ user.nickname }}!</h1>
     {% for post in posts %}
     <div><p>{{ post.author.nickname }} says: <b>{{ post.body }}</b></p></div>
     {% endfor %}
 {% endblock %}
+
+<section id="mainslider" class="color_section diagonal_section with_background_image" style="height: 500px;">
+        <div class="flexslider">
+            <ul class="slides">
+                <li>
+                    <div style="margin-top: 20%"></div>
+                    <div class="slide_description_wrapper">
+                        <div class="container">
+                            <div class="slide_description row">
+                                <div class="col-sm-12">
+                                    <p data-animation="fadeInLeft">Invention auctions</p>
+                                    <h3 data-animation="fadeInLeft">
+                                        <strong>
+                                            Your individual stake in innovation<br>
+                                            at your price
+                                        </strong>
+                                    </h3>
+                                    <div data-animation="fadeInRight">
+                                        <a href="about.php" class="theme_button inverse">Start here</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="blog" class="light_section">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 to_animate">
+                    <h2 class="section_header text-center">Our VentureMines</h2>
+
+                    <p>Check out our latest auctions</p>
+                </div>
+            </div>
+            <div class="row">
+                                    <div class="col-sm-6" onclick="location.href = 'item.php?id=1';">
+                        <div class="blog-item">
+                            <img src="img/ventures/1.jpg" alt="">
+
+                            <div class="blog-item-info">
+                                <h3>
+                                    <a href="item.php?id=1"><b>The Centrax</b></a>
+                                </h3>
+
+                                <p style="color: #F6F6F6">Ends on
+                                    01-01-2016                                </p>
+                            </div>
+                        </div>
+                    </div>
+                                        <div class="col-sm-6" onclick="location.href = 'item.php?id=2';">
+                        <div class="blog-item">
+                            <img src="img/ventures/2.jpg" alt="">
+
+                            <div class="blog-item-info">
+                                <h3>
+                                    <a href="item.php?id=2"><b>The Parallax</b></a>
+                                </h3>
+
+                                <p style="color: #F6F6F6">Ends on
+                                    01-01-2016                                </p>
+                            </div>
+                        </div>
+                    </div>
+                                </div>
+        </div>
+    </section>
+
+<div class="news-modal modal fade" id="slide-bottom-popup">
+    <div class="modal-news-body">
+        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+        <p id="newbidtext">Someone bid 200 shares, each for $20, on First Invention</p>
+        <a href="" class="btn-primary btn-plain btn popup-button" id="newbidlink">View this auction</a>
+    </div>
+</div>
+
